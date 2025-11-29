@@ -12,7 +12,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Heebo', 'Segoe UI', Tahoma, Arial, sans-serif;
             line-height: 1.7;
@@ -20,7 +19,6 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             background-attachment: fixed;
         }
-
         .hero {
             background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
             color: white;
@@ -30,7 +28,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .hero::before {
             content: '';
             position: absolute;
@@ -42,7 +39,6 @@
             background-size: cover;
             opacity: 0.1;
         }
-
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -51,7 +47,6 @@
             position: relative;
             z-index: 1;
         }
-
         .hero .subtitle {
             font-size: 1.3rem;
             opacity: 0.95;
@@ -59,7 +54,6 @@
             position: relative;
             z-index: 1;
         }
-
         .hero .year {
             font-size: 1.5rem;
             margin-top: 1rem;
@@ -71,7 +65,36 @@
             position: relative;
             z-index: 1;
         }
-
+        .hero-nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-top: 1.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            animation: pulse 2s infinite;
+        }
+        .hero-nav-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+        }
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            }
+            50% {
+                box-shadow: 0 8px 35px rgba(255, 107, 107, 0.5);
+            }
+        }
         .container {
             max-width: 1200px;
             margin: -2rem auto 2rem;
@@ -81,7 +104,6 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
             overflow: hidden;
         }
-
         .welcome-banner {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             color: white;
@@ -92,11 +114,9 @@
             line-height: 1.8;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-
         .content-wrapper {
             padding: 2rem;
         }
-
         .control-buttons {
             display: flex;
             gap: 1rem;
@@ -104,7 +124,6 @@
             justify-content: center;
             flex-wrap: wrap;
         }
-
         .control-btn {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -117,12 +136,10 @@
             transition: all 0.3s;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
-
         .control-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.25);
         }
-
         .accordion-section {
             margin: 1.5rem 0;
             border-radius: 15px;
@@ -130,11 +147,9 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: all 0.3s;
         }
-
         .accordion-section:hover {
             box-shadow: 0 8px 25px rgba(0,0,0,0.12);
         }
-
         .accordion-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -148,69 +163,106 @@
             transition: all 0.3s;
             user-select: none;
         }
-
         .accordion-header:hover {
             background: linear-gradient(135deg, #5568d3 0%, #6a3d8f 100%);
         }
-
         .accordion-header.active {
             background: linear-gradient(135deg, #5568d3 0%, #6a3d8f 100%);
         }
-
         .accordion-icon {
             font-size: 1.8rem;
             transition: transform 0.3s;
             margin-left: 1rem;
         }
-
         .accordion-header.active .accordion-icon {
             transform: rotate(180deg);
         }
-
         .accordion-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease-out;
             background: #f8f9fa;
         }
-
         .accordion-content.active {
             max-height: 10000px;
             transition: max-height 0.6s ease-in;
         }
-
         .accordion-inner {
             padding: 2rem;
         }
-
         /* Special styling for different section types */
         .instructor-section .accordion-header {
             background: linear-gradient(135deg, #00acc1 0%, #00838f 100%);
         }
-
         .instructor-section .accordion-header:hover,
         .instructor-section .accordion-header.active {
             background: linear-gradient(135deg, #00838f 0%, #006064 100%);
         }
-
         .team-section .accordion-header {
             background: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%);
         }
-
         .team-section .accordion-header:hover,
         .team-section .accordion-header.active {
             background: linear-gradient(135deg, #0652c7 0%, #5a9ae0 100%);
         }
-
         .ai-section .accordion-header {
             background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
         }
-
         .ai-section .accordion-header:hover,
         .ai-section .accordion-header.active {
             background: linear-gradient(135deg, #ee5a52 0%, #feb842 100%);
         }
-
+        /* Recordings section styling */
+        .recordings-section .accordion-header {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        }
+        .recordings-section .accordion-header:hover,
+        .recordings-section .accordion-header.active {
+            background: linear-gradient(135deg, #c0392b 0%, #96281b 100%);
+        }
+        .lecture-item {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-right: 5px solid #e74c3c;
+        }
+        .lecture-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .lecture-date {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            background: #ecf0f1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+        }
         .instructor-card {
             background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
             color: #00695c;
@@ -218,20 +270,17 @@
             border-radius: 12px;
             border: 2px solid #4dd0e1;
         }
-
         .instructor-card h3 {
             color: #00695c;
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
         }
-
         .instructor-info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
             margin-bottom: 1.5rem;
         }
-
         .info-item {
             background: white;
             padding: 1.2rem;
@@ -239,7 +288,6 @@
             border-right: 4px solid #00acc1;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-
         .info-item strong {
             display: block;
             font-size: 0.9rem;
@@ -249,43 +297,36 @@
             letter-spacing: 1px;
             font-weight: 600;
         }
-
         .info-item span {
             font-size: 1.1rem;
             font-weight: 500;
             color: #2c3e50;
         }
-
         .info-item a {
             color: #00838f;
             text-decoration: none;
             border-bottom: 2px solid transparent;
             transition: all 0.3s;
         }
-
         .info-item a:hover {
             border-bottom-color: #00838f;
         }
-
         .bio-section p {
             font-size: 1.05rem;
             line-height: 1.8;
             margin-bottom: 1rem;
             color: #2c3e50;
         }
-
         .bio-section ul {
             margin: 1rem 0 1rem 2rem;
             line-height: 1.8;
         }
-
         .research-links {
             display: flex;
             gap: 1rem;
             margin-top: 1rem;
             flex-wrap: wrap;
         }
-
         .research-link {
             background: #00acc1;
             color: white;
@@ -298,31 +339,26 @@
             align-items: center;
             gap: 0.5rem;
         }
-
         .research-link:hover {
             background: #00838f;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
-
         .team-requirement-content {
             background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
             padding: 2rem;
             border-radius: 12px;
             border: 3px solid #74b9ff;
         }
-
         .team-requirement-content p {
             font-size: 1.15rem;
             line-height: 1.8;
             margin: 1rem 0;
             color: #2c3e50;
         }
-
         .ai-policy-content {
             padding: 0;
         }
-
         .policy-box {
             background: white;
             padding: 1.5rem;
@@ -331,11 +367,9 @@
             border-right: 5px solid #e74c3c;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-
         .allowed {
             border-right-color: #27ae60;
         }
-
         .policy-box h4 {
             display: flex;
             align-items: center;
@@ -343,26 +377,21 @@
             margin-bottom: 1rem;
             font-size: 1.2rem;
         }
-
         .allowed h4 {
             color: #27ae60;
         }
-
         .not-allowed h4 {
             color: #e74c3c;
         }
-
         .policy-box ul {
             list-style: none;
             margin-right: 0;
         }
-
         .policy-box li {
             padding: 0.6rem 0;
             padding-right: 1.5rem;
             position: relative;
         }
-
         .allowed li::before {
             content: '✓';
             position: absolute;
@@ -371,7 +400,6 @@
             font-weight: bold;
             font-size: 1.2rem;
         }
-
         .not-allowed li::before {
             content: '✗';
             position: absolute;
@@ -380,7 +408,6 @@
             font-weight: bold;
             font-size: 1.2rem;
         }
-
         .monitoring-box {
             background: #fff3cd;
             border: 2px solid #ffc107;
@@ -388,14 +415,12 @@
             border-radius: 10px;
             margin: 1.5rem 0;
         }
-
         .resource-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
             margin: 2rem 0;
         }
-
         .resource-card {
             background: white;
             padding: 1.5rem;
@@ -404,25 +429,21 @@
             transition: all 0.3s;
             border-right: 4px solid #667eea;
         }
-
         .resource-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
-
         .resource-card h4 {
             color: #667eea;
             font-size: 1.2rem;
             margin-bottom: 1rem;
         }
-
         .resource-card p {
             color: #666;
             font-size: 0.95rem;
             margin-bottom: 1rem;
             line-height: 1.6;
         }
-
         .resource-card a {
             display: inline-block;
             background: #667eea;
@@ -433,11 +454,9 @@
             font-weight: 500;
             transition: all 0.3s;
         }
-
         .resource-card a:hover {
             background: #5568d3;
         }
-
         .traditional-sources {
             background: white;
             padding: 1.5rem;
@@ -445,7 +464,6 @@
             margin-top: 1.5rem;
             border: 2px dashed #ddd;
         }
-
         .traditional-sources h5 {
             color: #666;
             font-size: 0.9rem;
@@ -453,27 +471,23 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
         .traditional-sources ul {
             column-count: 2;
             column-gap: 2rem;
             list-style-position: inside;
         }
-
         .traditional-sources li {
             font-size: 0.9rem;
             font-style: italic;
             color: #666;
             padding: 0.3rem 0;
         }
-
         .research-types {
             background: white;
             padding: 1.5rem;
             border-radius: 10px;
             margin: 1.5rem 0;
         }
-
         .research-type-item {
             padding: 1.2rem;
             margin: 1rem 0;
@@ -481,20 +495,17 @@
             border-radius: 8px;
             border-right: 4px solid #667eea;
         }
-
         .research-type-item h4 {
             color: #667eea;
             margin-bottom: 0.8rem;
             font-size: 1.1rem;
         }
-
         .procedures-list {
             background: white;
             padding: 1.5rem;
             border-radius: 10px;
             list-style: none;
         }
-
         .procedures-list li {
             padding: 1rem;
             margin: 0.8rem 0;
@@ -503,12 +514,10 @@
             border-right: 4px solid #667eea;
             transition: all 0.3s;
         }
-
         .procedures-list li:hover {
             background: #e3f2fd;
             transform: translateX(-5px);
         }
-
         .grading-table {
             width: 100%;
             border-collapse: separate;
@@ -519,7 +528,6 @@
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
-
         .grading-table th {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -528,34 +536,28 @@
             font-weight: 600;
             font-size: 1.1rem;
         }
-
         .grading-table td {
             padding: 1rem;
             border-bottom: 1px solid #e9ecef;
             text-align: center;
         }
-
         .grading-table .component-name {
             text-align: right;
             font-weight: 500;
             color: #2c3e50;
         }
-
         .grading-table tr:hover {
             background: #f8f9fa;
         }
-
         .grading-table .total-row {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             font-weight: bold;
             font-size: 1.1rem;
         }
-
         .grading-table .total-row td {
             border-bottom: none;
         }
-
         .timeline-table {
             width: 100%;
             border-collapse: separate;
@@ -566,7 +568,6 @@
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
-
         .timeline-table th {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             color: white;
@@ -574,26 +575,21 @@
             text-align: right;
             font-weight: 600;
         }
-
         .timeline-table td {
             padding: 1.2rem;
             border-bottom: 1px solid #e9ecef;
             text-align: right;
         }
-
         .timeline-table tr:nth-child(even) {
             background: #f8f9fa;
         }
-
         .timeline-table tr:hover {
             background: #e3f2fd;
         }
-
         .steps-container {
             counter-reset: step;
             margin: 1.5rem 0;
         }
-
         .step-item {
             background: white;
             padding: 1.5rem;
@@ -604,12 +600,10 @@
             position: relative;
             transition: all 0.3s;
         }
-
         .step-item:hover {
             transform: translateX(-5px);
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
-
         .step-item::before {
             counter-increment: step;
             content: counter(step);
@@ -629,7 +623,6 @@
             font-size: 1.3rem;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
-
         .important-note {
             background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
             padding: 1.5rem;
@@ -637,7 +630,6 @@
             margin: 1.5rem 0;
             border-right: 5px solid #e17055;
         }
-
         .footer {
             text-align: center;
             padding: 3rem;
@@ -649,58 +641,54 @@
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             margin-top: 0;
         }
-
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
             }
-            
+            .hero-nav-btn {
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+            }
             .container {
                 margin: 1rem;
                 border-radius: 15px;
             }
-            
             .content-wrapper {
                 padding: 1rem;
             }
-
             .accordion-header {
                 font-size: 1.2rem;
                 padding: 1.2rem 1.5rem;
             }
-
             .accordion-inner {
                 padding: 1.5rem;
             }
-
             .instructor-info-grid {
                 grid-template-columns: 1fr;
             }
-
             .resource-grid {
                 grid-template-columns: 1fr;
             }
-
             .traditional-sources ul {
                 column-count: 1;
             }
-
             .step-item {
                 padding-right: 3.5rem;
             }
-
             .step-item::before {
                 width: 2.5rem;
                 height: 2.5rem;
                 font-size: 1.1rem;
             }
-
             .control-buttons {
                 flex-direction: column;
             }
-
             .control-btn {
                 width: 100%;
+            }
+            .lecture-title {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
@@ -710,20 +698,20 @@
         <h1>🎓 סמינר בניהול פיננסי והשקעות 🎓</h1>
         <div class="subtitle">המרכז האקדמי למשפט ולעסקים רמת גן</div>
         <div class="year">תשפ"ו | 2025-2026</div>
+        <a href="#course-recordings" class="hero-nav-btn">
+            🎬 הרצאות הקורס
+        </a>
     </div>
-
     <div class="container">
         <div class="welcome-banner">
             ברוכים הבאים לסמינר בניהול פיננסי והשקעות! 🚀<br>
             מסע מרתק אל עולם המחקר האמפירי והתיאורטי בשוק ההון, מימון חברות וחשבונאות
         </div>
-
         <div class="content-wrapper">
             <div class="control-buttons">
                 <button class="control-btn" onclick="expandAll()">🔽 פתח את כל הסעיפים</button>
                 <button class="control-btn" onclick="collapseAll()">🔼 סגור את כל הסעיפים</button>
             </div>
-
             <!-- פרטי המרצה והקורס -->
             <div class="accordion-section instructor-section">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -780,7 +768,31 @@
                     </div>
                 </div>
             </div>
-
+            <!-- הקלטות של מפגשי ההנחייה -->
+            <div class="accordion-section recordings-section" id="course-recordings">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>🎬 הקלטות של מפגשי ההנחייה עם ד״ר צבאן</span>
+                    <span class="accordion-icon">▼</span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-inner">
+                        <div class="lecture-item">
+                            <div class="lecture-title">
+                                📹 הרצאה 1 - מהו סמינר? ציפיות, מבנה ותהליך
+                                <span class="lecture-date">19.11.2025</span>
+                            </div>
+                            <div class="video-container">
+                                <iframe 
+                                    src="https://www.youtube.com/embed/weoyL6BVrGg" 
+                                    title="הרצאה 1 - מהו סמינר? ציפיות, מבנה ותהליך"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- דרישת עבודה בצוות -->
             <div class="accordion-section team-section">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -800,7 +812,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- מדיניות AI -->
             <div class="accordion-section ai-section">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -812,7 +823,6 @@
                         <p style="font-size: 1.15rem; margin-bottom: 1.5rem; line-height: 1.8; padding: 1rem; background: white; border-radius: 10px;">
                             בעידן הבינה המלאכותית, חשוב להבין את ההבדל בין שימוש לגיטימי ללא-לגיטימי בכלים אלו. המטרה היא לעודד למידה אותנטית תוך ניצול חכם של הטכנולוגיה.
                         </p>
-
                         <div class="policy-box allowed">
                             <h4>✅ שימושים מותרים ומעודדים</h4>
                             <ul>
@@ -825,7 +835,6 @@
                                 <li><strong>תרגום:</strong> תרגום טקסטים מאנגלית לעברית ולהיפך לצורך הבנה (לא לשימוש ישיר בעבודה)</li>
                             </ul>
                         </div>
-
                         <div class="policy-box not-allowed">
                             <h4>❌ שימושים אסורים בהחלט</h4>
                             <ul>
@@ -837,7 +846,6 @@
                                 <li><strong>העתקה מפרזנטציות:</strong> שימוש בשקופיות שנוצרו על ידי AI ללא עיבוד עצמי מהותי</li>
                             </ul>
                         </div>
-
                         <div class="monitoring-box">
                             <p style="margin-bottom: 1rem;">
                                 <strong>⚠️ חשוב לדעת:</strong> כל העבודות בסמינר זה יעברו בדיקה אוטומטית באמצעות מערכת <strong>GPTZero</strong> - כלי מתקדם לזיהוי תוכן שנוצר על ידי בינה מלאכותית.
@@ -853,7 +861,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- מטרות הסמינריון -->
             <div class="accordion-section">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -868,7 +875,6 @@
                         <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; background: white; padding: 1.2rem; border-radius: 10px; border-right: 4px solid #667eea;">
                             <strong>🎓 מהות העשייה המחקרית:</strong> מחקר אקדמי איננו רק כתיבת עבודה - זוהי התנסות בחשיבה מדעית שיטתית. תלמדו לזהות פערים בידע הקיים, לנסח שאלות מחקר מעניינות ורלוונטיות, לפתח השערות מבוססות תיאוריה, לאסוף ולנתח נתונים בצורה מדויקת, ולהסיק מסקנות מבוססות. תהליך זה מחדד את היכולת האנליטית, מפתח חשיבה ביקורתית ומלמד להתמודד עם אי-ודאות ומורכבות - מיומנויות חיוניות לכל קריירה מקצועית בתחומי הייעוץ, הניתוח הפיננסי, הביקורת והניהול.
                         </p>
-
                         <div class="research-types">
                             <h3 style="color: #667eea; margin-bottom: 1.5rem; font-size: 1.4rem;">🔬 סוגי מחקרים שניתן לבצע</h3>
                             
@@ -884,7 +890,6 @@
                                     <li>השפעת מינוף פיננסי על תשואות למשקיעים</li>
                                 </ul>
                             </div>
-
                             <div class="research-type-item">
                                 <h4>2️⃣ מטא-אנליזה (Meta-Analysis)</h4>
                                 <p>ניתוח סטטיסטי משולב של מחקרים קיימים בנושא מסוים. <strong>דוגמאות לנושאים:</strong></p>
@@ -895,7 +900,6 @@
                                     <li>סקירה מקיפה של ספרות מחקר על תמחור נכסים והערכת שווי</li>
                                 </ul>
                             </div>
-
                             <div class="research-type-item">
                                 <h4>3️⃣ מחקר תיאורטי (Theoretical Research)</h4>
                                 <p>פיתוח או הרחבת מודלים תיאורטיים בתחום המימון. <strong>דוגמאות לנושאים:</strong></p>
@@ -906,7 +910,6 @@
                                     <li>מודל תיאורטי לקביעת מדיניות דיבידנד אופטימלית</li>
                                 </ul>
                             </div>
-
                             <p style="margin-top: 1.5rem; background: #e3f2fd; padding: 1rem; border-radius: 8px; border-right: 4px solid #2196f3;">
                                 💡 <strong>הערה:</strong> בחירת סוג המחקר והנושא תלויה בתחום העניין שלכם, בזמינות הנתונים ובכישורים שרכשתם. במהלך פגישות ההנחיה נחליט יחד איזה סוג מחקר ונושא מתאימים ביותר לעבודתכם. חשוב לבחור נושא שמעניין אתכם באמת - זה יעזור לשמור על המוטיבציה לאורך כל השנה.
                             </p>
@@ -914,7 +917,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- מקורות מידע -->
             <div class="accordion-section">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -926,63 +928,53 @@
                         <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">
                             להלן מאגרי המחקר המובילים בתחום המימון והכלכלה, שבהם תוכלו למצוא מאמרים עדכניים, working papers ונתונים למחקר:
                         </p>
-
                         <div class="resource-grid">
                             <div class="resource-card">
                                 <h4>📚 Google Scholar</h4>
                                 <p>מנוע חיפוש אקדמי מקיף לאיתור מאמרים, ספרים ועבודות אקדמיות בכל התחומים.</p>
                                 <a href="https://scholar.google.com/" target="_blank">גישה למאגר →</a>
                             </div>
-
                             <div class="resource-card">
                                 <h4>🔬 ResearchGate</h4>
                                 <p>רשת חברתית אקדמית המאפשרת גישה למחקרים ויצירת קשר עם חוקרים.</p>
                                 <a href="https://www.researchgate.net/" target="_blank">גישה למאגר →</a>
                             </div>
-
                             <div class="resource-card">
                                 <h4>📄 SSRN</h4>
                                 <p>Social Science Research Network - מאגר מוביל למחקרים בכלכלה, מימון וחשבונאות.</p>
                                 <a href="https://www.ssrn.com/" target="_blank">גישה למאגר →</a>
                             </div>
-
                             <div class="resource-card">
                                 <h4>🏛️ NBER</h4>
                                 <p>National Bureau of Economic Research - working papers בכלכלה ומימון.</p>
                                 <a href="https://www.nber.org/" target="_blank">גישה למאגר →</a>
                             </div>
-
                             <div class="resource-card">
                                 <h4>📊 JSTOR</h4>
                                 <p>ארכיון דיגיטלי אקדמי עם מיליוני מאמרים וספרים.</p>
                                 <a href="https://www.jstor.org/" target="_blank">גישה למאגר →</a>
                             </div>
-
                             <div class="resource-card">
                                 <h4>🎓 EBSCO / EconLit</h4>
                                 <p>מאגר מקיף למחקרים בכלכלה, נגיש דרך הספרייה האקדמית.</p>
                                 <a href="https://www.ebsco.com/" target="_blank">גישה למאגר →</a>
                             </div>
-
                             <div class="resource-card">
                                 <h4>💡 IDEAS / RePEc</h4>
                                 <p>מאגר חופשי למחקרים כלכליים עם למעלה ממיליון פריטים.</p>
                                 <a href="https://ideas.repec.org/" target="_blank">גישה למאגר →</a>
                             </div>
-
                             <div class="resource-card">
                                 <h4>🏦 בנק ישראל</h4>
                                 <p>סקרים, מחקרים ונתונים כלכליים על המשק הישראלי.</p>
                                 <a href="https://www.boi.org.il/" target="_blank">גישה למאגר →</a>
                             </div>
-
                             <div class="resource-card">
                                 <h4>📈 Yahoo Finance</h4>
                                 <p>נתוני שוק בזמן אמת, דוחות כספיים וכלי ניתוח פיננסי.</p>
                                 <a href="https://finance.yahoo.com/" target="_blank">גישה למאגר →</a>
                             </div>
                         </div>
-
                         <div class="traditional-sources">
                             <h5>כתבי עת אקדמיים מובילים (לעיון נוסף)</h5>
                             <ul>
@@ -1001,7 +993,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- נהלי סמינריון -->
             <div class="accordion-section">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -1027,7 +1018,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- קריטריונים להערכה -->
             <div class="accordion-section">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -1039,7 +1029,6 @@
                         <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
                             הערכת העבודה תתבסס על מכלול איכויותיה במספר ממדים מרכזיים:
                         </p>
-
                         <table class="grading-table">
                             <thead>
                                 <tr>
@@ -1109,7 +1098,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- הנחיות לתוכנית המחקר -->
             <div class="accordion-section">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -1121,7 +1109,6 @@
                         <p style="font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.8;">
                             הצעת המחקר היא המסמך המכוון את העבודה. היא תהיה באורך <strong>2-3 עמודים</strong> ותכלול:
                         </p>
-
                         <div class="steps-container">
                             <div class="step-item">
                                 <strong>פרטי הסטודנטים:</strong> שמות מלאים, מספרי ת"ז, דוא"ל וטלפונים
@@ -1157,7 +1144,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- הנחיות לעבודה הסופית -->
             <div class="accordion-section">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -1169,7 +1155,6 @@
                         <p style="font-size: 1.1rem; margin-bottom: 1.5rem; line-height: 1.8;">
                             העבודה הסופית תהיה בהיקף של <strong>15-20 עמודים</strong> (להוציא נספחים). העבודה תיכתב בלשון אקדמית בהירה. כאשר מוזכר מאמר יצויין שם המחבר ושנת הפרסום (לדוגמה: שביט וצבאן, 2024).
                         </p>
-
                         <h3 style="color: #667eea; margin: 2rem 0 1rem;">🏗️ מבנה העבודה</h3>
                         <div class="steps-container">
                             <div class="step-item">
@@ -1209,7 +1194,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- לוח זמנים -->
             <div class="accordion-section">
                 <div class="accordion-header" onclick="toggleAccordion(this)">
@@ -1223,7 +1207,6 @@
                                 <strong>⏰ חשוב מאוד!</strong> שמירה על לוח הזמנים קריטית להצלחה. איחורים מצטברים משפיעים על איכות ועל הציון.
                             </p>
                         </div>
-
                         <table class="timeline-table">
                             <thead>
                                 <tr>
@@ -1275,7 +1258,6 @@
                                 </tr>
                             </tbody>
                         </table>
-
                         <div class="important-note" style="margin-top: 2rem;">
                             <p style="font-size: 1.1rem; line-height: 1.8;">
                                 <strong>💪 מפתח ההצלחה:</strong> התחלה מוקדמת, עבודה עקבית ופגישות הנחיה סדירות. מחקר איכותי דורש זמן - לחשיבה מעמיקה, לעבודה איטרטיבית ולהתפתחות הרעיונות.
@@ -1284,14 +1266,11 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
     <div class="footer">
         🌟 ב ה צ ל ח ה ! 🌟
     </div>
-
     <script>
         function toggleAccordion(header) {
             const content = header.nextElementSibling;
@@ -1315,7 +1294,6 @@
                 }, 100);
             }
         }
-
         function expandAll() {
             const headers = document.querySelectorAll('.accordion-header');
             const contents = document.querySelectorAll('.accordion-content');
@@ -1323,7 +1301,6 @@
             headers.forEach(header => header.classList.add('active'));
             contents.forEach(content => content.classList.add('active'));
         }
-
         function collapseAll() {
             const headers = document.querySelectorAll('.accordion-header');
             const contents = document.querySelectorAll('.accordion-content');
@@ -1334,7 +1311,6 @@
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
         // Optional: Close other sections when opening one (accordion behavior)
         // Uncomment if you want only one section open at a time
         /*
