@@ -19,6 +19,38 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             background-attachment: fixed;
         }
+        /* Urgent Notice Banner */
+        .urgent-notice {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            color: white;
+            padding: 1.2rem 2rem;
+            text-align: center;
+            font-size: 1.15rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 100;
+            animation: urgentPulse 2s ease-in-out infinite;
+        }
+        .urgent-notice a {
+            color: #fff;
+            background: rgba(255,255,255,0.25);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            margin-right: 0.5rem;
+            transition: all 0.3s;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+        .urgent-notice a:hover {
+            background: rgba(255,255,255,0.4);
+            transform: scale(1.05);
+        }
+        @keyframes urgentPulse {
+            0%, 100% { box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+            50% { box-shadow: 0 4px 25px rgba(255,107,107,0.5); }
+        }
         .hero {
             background: linear-gradient(135deg, rgba(102, 126, 234, 0.95) 0%, rgba(118, 75, 162, 0.95) 100%);
             color: white;
@@ -630,6 +662,76 @@
             margin: 1.5rem 0;
             border-right: 5px solid #e17055;
         }
+        /* Assignment Links Section */
+        .assignments-section {
+            background: linear-gradient(135deg, #a8e6cf 0%, #88d8b0 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 3px solid #27ae60;
+        }
+        .assignments-section h3 {
+            color: #1e8449;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .assignment-link-card {
+            background: white;
+            padding: 1.2rem 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+        .assignment-link-card:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        .assignment-link-card .info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .assignment-link-card .number {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .assignment-link-card .title {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .assignment-link-card .deadline {
+            font-size: 0.9rem;
+            color: #e74c3c;
+            font-weight: 500;
+        }
+        .assignment-link-card a {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        .assignment-link-card a:hover {
+            background: linear-gradient(135deg, #1e8449 0%, #27ae60 100%);
+            transform: scale(1.05);
+        }
         .footer {
             text-align: center;
             padding: 3rem;
@@ -690,10 +792,28 @@
                 flex-direction: column;
                 align-items: flex-start;
             }
+            .urgent-notice {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+            .assignment-link-card {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            .assignment-link-card .info {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Urgent Notice Banner -->
+    <div class="urgent-notice">
+        ⚠️ <strong>שימו לב!</strong> מועד מטלת הגשה 1 מתקרב (הגדרת נושא) – ראו פרטים באתר 
+        <a href="1-ChoosingTopic.html">📋 להנחיות המלאות</a>
+    </div>
+
     <div class="hero">
         <h1>🎓 סמינר בניהול פיננסי והשקעות 🎓</h1>
         <div class="subtitle">המרכז האקדמי למשפט ולעסקים רמת גן</div>
@@ -1266,6 +1386,22 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Assignments Links Section -->
+            <div class="assignments-section">
+                <h3>📌 קישורים למטלות הגשה</h3>
+                <div class="assignment-link-card">
+                    <div class="info">
+                        <span class="number">1</span>
+                        <div>
+                            <div class="title">הגשת הצעת נושא מחקר</div>
+                            <div class="deadline">מועד הגשה: סוף דצמבר 2025</div>
+                        </div>
+                    </div>
+                    <a href="1-ChoosingTopic.html">להנחיות המלאות →</a>
+                </div>
+            </div>
+
         </div>
     </div>
     <div class="footer">
@@ -1311,24 +1447,6 @@
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-        // Optional: Close other sections when opening one (accordion behavior)
-        // Uncomment if you want only one section open at a time
-        /*
-        function toggleAccordion(header) {
-            const content = header.nextElementSibling;
-            const isActive = header.classList.contains('active');
-            
-            // Close all sections
-            document.querySelectorAll('.accordion-header').forEach(h => h.classList.remove('active'));
-            document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('active'));
-            
-            // Open clicked section if it wasn't active
-            if (!isActive) {
-                header.classList.add('active');
-                content.classList.add('active');
-            }
-        }
-        */
     </script>
 </body>
 </html>
